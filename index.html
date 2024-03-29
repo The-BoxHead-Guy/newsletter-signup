@@ -14,20 +14,16 @@
       rel="stylesheet"
     />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
+    <!-- assets links -->
     <link rel="stylesheet" href="/assets/css/index.css" />
+    <script src="/assets/js/script.js"></script>
 
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
   </head>
   <body>
-    <main class="inactive">
+    <main class="active" id="newsletter">
       <div class="newsletter__img">
         <img src="/assets/images/illustration-sign-up-mobile.svg" alt="" />
       </div>
@@ -57,15 +53,12 @@
           </ul>
         </div>
         <div class="newsletter__form">
-          <form>
+          <form action="#" method="get">
             <label for="email">Email address</label>
-            <input
-              type="email"
-              placeholder="email@company.com"
-              id="email"
-              required
-            />
-            <button type="submit">Subscribe to monthly newsletter</button>
+            <input type="email" placeholder="email@company.com" id="email" />
+            <div class="newsletter__button button">
+              Subscribe to monthly newsletter
+            </div>
           </form>
         </div>
       </div>
@@ -80,7 +73,7 @@
 
     <!-- Sign-up form end -->
 
-    <div class="success active">
+    <div class="success inactive" id="success">
       <!-- Success message start -->
       <div class="success__img-container">
         <img src="/assets/images/icon-success.svg" alt="" />
@@ -98,7 +91,7 @@
 
       <!-- Button to dismiss success message -->
       <div class="success__button-container">
-        <button type="submit" class="success__button">Dismiss message</button>
+        <button class="success__button button">Dismiss message</button>
       </div>
     </div>
   </body>
