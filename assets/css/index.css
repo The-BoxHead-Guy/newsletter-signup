@@ -67,7 +67,7 @@ p {
 
 /* main sign-up form */
 .active {
-  display: block;
+  display: block !important;
 }
 
 .inactive {
@@ -150,7 +150,7 @@ main {
 }
 
 /* Components */
-button[type="submit"] {
+.button {
   width: min(100%, 20rem);
   margin-inline: auto;
   border-radius: var(--radius-1);
@@ -161,6 +161,7 @@ button[type="submit"] {
   padding: 1rem;
   cursor: pointer;
   font-size: 0.8rem;
+  text-align: center;
 }
 
 /* success */
