@@ -18,7 +18,7 @@
     </title>
   </head>
   <body>
-    <main>
+    <main class="inactive">
       <div class="newsletter__img">
         <img src="/assets/images/illustration-sign-up-mobile.svg" alt="" />
       </div>
@@ -61,10 +61,6 @@
         </div>
       </div>
 
-      <!-- Sign-up form end -->
-
-      <!-- Success message start -->
-
       <!-- Thanks for subscribing! A confirmation email has been sent to
       ash@loremcompany.com. Please open it and click the button inside to
       confirm your subscription. Dismiss message -->
@@ -78,5 +74,29 @@
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
     </main>
+
+    <!-- Sign-up form end -->
+
+    <div class="success active">
+      <!-- Success message start -->
+      <div class="success__img-container">
+        <img src="/assets/images/icon-success.svg" alt="" />
+      </div>
+
+      <!-- Display success message -->
+      <div class="success__message">
+        <h2 class="success__title">Thanks for subscribing!</h2>
+        <p class="success__desc">
+          A confirmation email has been sent to
+          <span class="success__email">ash@loremcompany</span>. Please open it
+          and click the button inside to confirm your subscription
+        </p>
+      </div>
+
+      <!-- Button to dismiss success message -->
+      <div class="success__button-container">
+        <button class="success__button">Dismiss message</button>
+      </div>
+    </div>
   </body>
 </html>
