@@ -8,7 +8,7 @@
 
 ## Style
 
-- [ ] Build the desktop design (newsletter and success message)
-- [ ] Create the "active" and "hover" items
+- [x] Build the desktop design (newsletter and success message)
+- [x] Create the "active" and "hover" items
 - [ ] Polish state items previously mentioned
 - [ ] (Optional) Set animation transitions for smooth experience
