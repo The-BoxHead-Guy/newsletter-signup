@@ -69,13 +69,9 @@ p {
 }
 
 /* main sign-up form */
-main.active,
-div.active {
-  display: block;
-}
 
-div.inactive,
-main.inactive {
+body div.inactive,
+body main.inactive {
   display: none;
 }
 
@@ -286,5 +282,9 @@ main {
         }
       }
     }
+  }
+
+  .success {
+    background-color: var(--white);
   }
 }
