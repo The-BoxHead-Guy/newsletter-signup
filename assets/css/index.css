@@ -286,5 +286,32 @@ main {
 
   .success {
     background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    width: 24rem;
+    height: auto;
+    border-radius: var(--radius-2);
+
+    & .success__img-container {
+      margin-block-end: var(--margin-2);
+
+      & img {
+        width: 80%;
+      }
+    }
+
+    & .success__message {
+      & .success__title {
+        margin-block-end: 0;
+      }
+
+      & .success__desc {
+        margin-block-end: var(--margin-3);
+        font-size: 0.9rem;
+      }
+    }
   }
 }
