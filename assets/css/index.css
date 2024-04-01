@@ -123,10 +123,22 @@ main {
       display: flex;
       flex-direction: column;
 
-      & label {
+      & .email-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         font-size: var(--fs-small);
-        font-weight: var(--fw-bold);
         margin-block-end: var(--margin-1);
+
+        & label {
+          font-weight: var(--fw-bold);
+        }
+
+        /* Email error */
+        & .email__error--message {
+          color: var(--tomato);
+          display: none;
+        }
       }
 
       & input[type="email"] {
@@ -277,6 +289,10 @@ main {
         margin-block-start: 0.8rem;
 
         & input:focus {
+          outline: 1px solid var(--dark-slate-grey);
+        }
+
+        & input:hover {
           outline: 1px solid var(--dark-slate-grey);
         }
       }
