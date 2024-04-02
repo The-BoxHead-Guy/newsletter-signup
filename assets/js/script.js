@@ -13,22 +13,40 @@ window.onload = () => {
   const successEmail = document.querySelector(".success__email");
 
   form.addEventListener("submit", (e) => {
-    const REG_MAIL_TOKEN = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    e.preventDefault();
 
-    if (!email.value || email.value === null) {
-      // console.log("Please insert a valid email");
+    // Setting an object with the values
+    const values = {
+      _email: "",
+      _REG_MAIL_TOKEN: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+
+      // Setting the values
+      set emailValue(input) {
+        this._email = input.trim(); // trim white spaces
+      },
+
+      // getting the values using getters
+      get email() {
+        return this._email;
+      },
+
+      get getRegexToken() {
+        return this._REG_MAIL_TOKEN;
+      },
+    };
+
+    // Setting the values
+    values.emailValue = email.value;
+    console.log(values.email);
+
+    if (!values.email) {
       displayErrorMessage(error, email);
-      e.preventDefault();
-    } else if (email.value.match(REG_MAIL_TOKEN)) {
-      // console.log("Email is valid");
+    } else if (values.email.match(values.getRegexToken)) {
       changeSuccessMessage(successEmail, email.value);
       showSuccessMessage(newsletter, successSegment);
-      e.preventDefault();
     } else {
-      console.log("Please insert a valid email");
+      displayErrorMessage(error, email);
     }
-
-    e.preventDefault();
   });
 
   dismissButton.addEventListener("click", () => {
