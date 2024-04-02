@@ -16,7 +16,7 @@
 
     <!-- assets links -->
     <link rel="stylesheet" href="/assets/css/index.css" />
-    <script src="/assets/js/script.js"></script>
+    <script defer src="/assets/js/script.js"></script>
 
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
@@ -57,12 +57,21 @@
           </ul>
         </div>
         <div class="newsletter__form">
-          <form action="#" method="get">
-            <label for="email">Email address</label>
-            <input type="email" placeholder="email@company.com" id="email" />
-            <div class="newsletter__button button">
-              Subscribe to monthly newsletter
+          <form action="/" method="GET">
+            <div class="email-container">
+              <!-- Email error if not valid -->
+              <label for="email">Email address</label>
+              <p class="email__error--message">Valid email required</p>
             </div>
+            <input
+              type="email"
+              name="email"
+              placeholder="email@company.com"
+              id="email"
+            />
+            <button type="submit" class="newsletter__button button">
+              Subscribe to monthly newsletter
+            </button>
           </form>
         </div>
       </div>
@@ -95,7 +104,9 @@
 
       <!-- Button to dismiss success message -->
       <div class="success__button-container">
-        <button class="success__button button">Dismiss message</button>
+        <button class="success__button button" id="dismiss">
+          Dismiss message
+        </button>
       </div>
     </div>
   </body>
