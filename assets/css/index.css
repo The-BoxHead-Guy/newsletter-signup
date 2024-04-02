@@ -137,6 +137,8 @@ main {
         /* Email error */
         & .email__error--message {
           color: var(--tomato);
+          font-weight: 500;
+          line-height: 1;
           display: none;
         }
       }
@@ -149,7 +151,11 @@ main {
         margin-block-end: var(--margin-2);
 
         &::placeholder {
-          color: var(--charcoal-grey);
+          color: var(--grey);
+        }
+
+        &::placeholder:invalid {
+          color: var(--tomato);
         }
       }
     }
@@ -179,6 +185,22 @@ main {
       var(--watermelon) 100%
     );
     box-shadow: 0px 8px 12px 1px var(--tomato-translucent);
+  }
+}
+
+.email__error--active {
+  outline: 1px solid var(--tomato);
+  color: var(--tomato);
+  background-color: var(--tomato-translucent);
+
+  &::placeholder {
+    color: var(--tomato) !important;
+  }
+
+  &::focus,
+  ::active,
+  ::hover {
+    outline: 1px solid var(--tomato) !important;
   }
 }
 
