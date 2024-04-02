@@ -3,8 +3,8 @@
 ## Functionality
 
 - [x] Finish to set up the functionality of success segment and newsletter
-- [ ] Validate E-mail data entering
-- [ ] Show states depending on E-mail Validation
+- [x] Validate E-mail data entering
+- [x] Show error state depending on E-mail Validation
 
 ## Style
 
