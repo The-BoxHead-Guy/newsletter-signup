@@ -17,7 +17,7 @@ window.onload = () => {
 
     if (!email.value || email.value === null) {
       // console.log("Please insert a valid email");
-      email.focus();
+      displayErrorMessage(error, email);
       e.preventDefault();
     } else if (email.value.match(REG_MAIL_TOKEN)) {
       // console.log("Email is valid");
@@ -54,4 +54,8 @@ const dismissMessage = (newsletter, success) => {
   newsletter.style.display = "flex";
 };
 
-// todo: Create the error messages if email is not valid
+//Create the error messages if email is not valid
+const displayErrorMessage = (errorMessage, emailEl) => {
+  errorMessage.style.display = "flex";
+  emailEl.classList.add("email__error--active");
+};
